@@ -1,0 +1,34 @@
+{
+  "name": "coincapio-data",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/ExodusMovement/coincapio-data/issues"
+  },
+  "license": "MIT",
+  "author": "The Exodus Movement",
+  "contributors": [
+    "Kirill Fomichev <fanatid@ya.ru> (https://github.com/fanatid)"
+  ],
+  "files": [
+    "package.json",
+    "LICENSE",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ExodusMovement/coincapio-data.git"
+  },
+  "scripts": {
+    "lint": "standard",
+    "test": "npm run lint && npm run unit",
+    "unit": ""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "^0.11.0",
+    "standard": "^6.0.4"
+  },
+  "private": true
+}
