@@ -11,7 +11,7 @@ test('get history for [1, 7, 30, 90, 180, 365] days and all time', async functio
     t.true(data.cap.length === data.price.length, 'cap have same length as price')
     if (interval === null) continue
 
-    var period = data.cap[data.cap.length - 1][0] - data.cap[0][0]
+    var period = data.cap[data.cap.length - 1].date - data.cap[0].date
     var days = Math.round(period / 1000 / 60 / 60 / 24)
     t.is(interval, days, 'same interval')
   }
