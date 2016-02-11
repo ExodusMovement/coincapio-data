@@ -1,10 +1,11 @@
-import got from 'got'
+import fetch from 'isomorphic-fetch'
 
 ;(async function () {
   let coins = {}
 
-  let response = await got('http://www.coincap.io/map')
-  for (let coin of JSON.parse(response.body)) {
+  let response = await fetch('http://www.coincap.io/map')
+  let body = await response.text()
+  for (let coin of JSON.parse(body)) {
     coins[coin.name.toLowerCase()] = coin.symbol
   }
 
