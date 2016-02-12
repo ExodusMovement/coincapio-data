@@ -6,7 +6,7 @@ const intervals = [1, 7, 30, 90, 180, 365]
 export async function history (coinName, interval) {
   let symbol = symbols[coinName.toLowerCase()] || coinName
   let timeframe = intervals.indexOf(interval) > -1 ? (interval + 'day/') : ''
-  let url = 'http://www.coincap.io/history/' + timeframe + symbol
+  let url = `http://www.coincap.io/history/${timeframe}${symbol}`
 
   let response = await fetch(url)
   let body = await response.text()
